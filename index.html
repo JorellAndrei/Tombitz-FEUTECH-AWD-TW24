@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
 
     <!--styles-->
     <link rel="stylesheet" href="./assets/CSS/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+
 
     <!--scripts-->
     <script src="./assets/JS/script.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1229210/lottie.js"></script>
+    <script src="https://get.mavo.io/stable/mavo.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
                 <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
             </li>
             <li class="navbar__item">
-                <a href="#" class="navbar__link"><i data-feather="message-square"></i><span>Messages</span></a>
+                <a href="#" class="navbar__link"><i data-feather="message-square"></i><span>About</span></a>
             </li>
             <li class="navbar__item">
                 <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>
@@ -63,6 +68,79 @@
             </div>
         </div>
     </div>
+
+
+    <!------------------- END HEADER  -------------------------->
+
+
+    <!------------------- 1ST HOME SECTION  -------------------------->
+
+    <div class="wrap">
+        <div class="back">
+            <div class="back__slide active">
+                <div class="progress"></div>
+            </div>
+            <div class="back__slide">
+                <div class="progress"></div>
+                <div class="back-front-image"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__slide active">
+                <div class="image"></div><span class="number">01</span><span class="date">30 MARCH 2017 <span class="date__time">12:37PM</span></span>
+            </div>
+            <div class="card__slide">
+                <div class="back-image"></div>
+                <div class="image"></div><span class="number">02</span><span class="date">30 MARCH 2017 <span class="date__time">12:37PM</span></span>
+            </div>
+            <div class="content">
+                <div class="content__slide active">
+                    <h2 class="title"> <span class="title__line"> <span class="title__inner">Mesmerizing</span></span><span class="title__line"> <span class="title__inner">Depths</span></span>
+                    </h2>
+                    <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget <br/> dolor. Mauris ac mattis lectus. Praesent facilisis <br/> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
+                    <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
+                </div>
+                <div class="content__slide">
+                    <h2 class="title"> <span class="title__line"> <span class="title__inner">Breathtaking</span></span><span class="title__line"> <span class="title__inner">Heights</span></span>
+                    </h2>
+                    <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget <br/> dolor. Mauris ac mattis lectus. Praesent facilisis <br/> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
+                    <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
+                </div>
+                <div class="content__ping content__ping--noanimation"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+
+    <!--------------- 2ND SECTION ----------------------->
+
+    <center>
+        <main mv-app="tabs" mv-bar="no-login" mv-storage="https://github.com/DmitrySharabin/mavo-tabs-widget">
+            <h2 property="headline">Headline</h2>
+            <section mv-list class="tabs" style="--count: [count(tab)];">
+                <details property="tab" mv-list-item open="[open]" mv-action="set(open.$all, false), set(open, true)">
+                    <meta property="open" />
+
+                    <summary property="title">
+                        <img class="icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/undraw_research.svg" mv-attr-src="image" alt="Icon for the [text] tab" />
+                        <span property="text">Tab name</span>
+                    </summary>
+
+                    <section property="content">
+                        <h3 property="headline">Tab headline</h3>
+                        <img property="image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/undraw_research.svg" alt="Illustration for [headline]" />
+                        <p property="text">Tab content</p>
+                        <a property="url" href="#">
+                            <span property="destination">Call to action</span>
+                        </a>
+                    </section>
+                </details>
+            </section>
+        </main>
+    </center>
+
+    <!-- END -->
 
     <script>
         feather.replace()
