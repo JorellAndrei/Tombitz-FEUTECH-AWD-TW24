@@ -1,7 +1,24 @@
 feather.replace()
 
+/**-------------------- NAVBAR  -------------------------*/
 
-/**---------------------------------------------*/
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all nav buttons
+    const navButtons = document.querySelectorAll('.nav-button');
+
+    // Add click event listener to each nav button
+    navButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Get the URL from the data-url attribute of the button
+            const url = this.dataset.url;
+
+            // Navigate to the URL
+            window.location.href = url;
+        });
+    });
+});
+
+/**-------------------- END -------------------------*/
 
 const slideElements = ['.back__slide', '.card__slide', '.content__slide'];
 let inProgress = false;

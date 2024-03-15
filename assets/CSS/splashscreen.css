@@ -1,0 +1,215 @@
+/*------------------------------- FONTS ---------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*------------------------------- General ---------------------------------*/
+
+:root {
+    --primary-color: #6bab78;
+    --secondary-color: #dee2dd;
+    --primary-bg-color: #245441;
+    --secondary-bg-color: #696c67;
+    --backup-color: #256bd3;
+    --darkerbackup-color: #2c4c74;
+    --backup-color2: #e74b25;
+    --btn-color: #3b3b44;
+    --darkerbtn-color: #302f2f;
+    --text-color: #ffffff;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    overflow-x: hidden;
+    background-color: var(--primary-bg-color);
+}
+
+.splash {
+    background: white;
+    /* Use the desired gradient colors and direction */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.splash-logo {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transform: translate(200px, -620px);
+}
+
+.cloud {
+    width: 250px;
+}
+
+.front {
+    padding-top: 45px;
+    margin-left: 25px;
+    display: inline;
+    position: absolute;
+    z-index: 11;
+    animation: clouds 8s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.back {
+    margin-top: -30px;
+    margin-left: 150px;
+    z-index: 12;
+    animation: clouds 12s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.right-front {
+    width: 45px;
+    height: 45px;
+    border-radius: 50% 50% 50% 0%;
+    background-color: #4c9beb;
+    display: inline-block;
+    margin-left: -25px;
+    z-index: 5;
+}
+
+.left-front {
+    width: 65px;
+    height: 65px;
+    border-radius: 50% 50% 0% 50%;
+    background-color: #4c9beb;
+    display: inline-block;
+    z-index: 5;
+}
+
+.right-back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50% 50% 0%;
+    background-color: #4c9beb;
+    display: inline-block;
+    margin-left: -20px;
+    z-index: 5;
+}
+
+.left-back {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 0% 50%;
+    background-color: #4c9beb;
+    display: inline-block;
+    z-index: 5;
+}
+
+.sun {
+    width: 120px;
+    height: 120px;
+    background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+    background: linear-gradient(to right, #fcbb04, #fffc00);
+    border-radius: 60px;
+    display: inline;
+    position: absolute;
+}
+
+.sunshine {
+    animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes clouds {
+    0% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}
+
+
+/*-------------------------------- MEDIA QUERIES --------------------------------------------*/
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .Header-visuals {
+        transform: translateX(4rem) translateY(-10px) rotate(-10deg);
+    }
+    .wrap {
+        transform: translateY(80rem);
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .Button {
+        height: 3rem;
+    }
+    .Header-visuals {
+        transform: translateX(4rem) translateY(-10px) rotate(-10deg);
+    }
+    .wrap {
+        transform: translateY(35rem);
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .Header-visuals {
+        transform: translateX(4rem) translateY(-10px) rotate(-10deg);
+    }
+    .wrap {
+        transform: translateY(200px);
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .Header-visuals {
+        transform: translateX(4rem) rotate(-10deg) translateY(-2rem);
+    }
+    .wrap {
+        transform: translateY(200px);
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
