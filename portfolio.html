@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT's Binfinity - Portfolio</title>
+
+
+    <!--styles-->
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!--scripts-->
+    <script src="./assets/JS/script.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1229210/lottie.js"></script>
+    <script src="https://get.mavo.io/stable/mavo.min.js"></script>
+</head>
+
+<body>
+
+    <!------------------- NAVBAR  -------------------------->
+
+
+    <div id="nav-bar" style="z-index: 2;">
+        <input id="nav-toggle" type="checkbox" />
+        <div id="nav-header"><a id="nav-title" href="https://codepen.io" target="_blank">ITs<i class="fab fa-bin"></i> Binfinity</a>
+            <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+            <hr/>
+        </div>
+
+        <div id="nav-content">
+
+            <div class="nav-button" data-url="./home.html">
+                <i class="fas fa-home"></i>
+                <span id="home">HOME</span>
+            </div>
+
+            <div class="nav-button " data-url="./about.html"><i class="fas fa-trash"></i><span>ABOUT</span></div>
+
+            <div class="nav-button" data-url="./features.html"><i class="fas fa-mobile"></i><span>FEATURES</span></div>
+
+            <hr/>
+
+            <div class="nav-button current tooltip-container" data-url="./portfolio.html"><i class="fas fa-folder"></i><span>PORTFOLIO</span></div>
+
+
+            <div class="nav-button" data-url="./team.html"><i class="fas fa-fire"></i><span>TEAM</span></div>
+
+            <div class="nav-button" data-url="./contact.html"><i class="fas fa-magic"></i><span>CONTACT</span></div>
+            <hr/>
+            <div class="nav-button" data-url="https://example.com/codepen-pro"><i class="fas fa-gem"></i><span>Codepen Pro</span></div>
+            <div id="nav-content-highlight"></div>
+        </div>
+        <input id="nav-footer-toggle" type="checkbox" />
+        <div id="nav-footer">
+            <div id="nav-footer-heading">
+                <div id="nav-footer-avatar"><img src="./index.html" /></div>
+                <div id="nav-footer-titlebox"><a id="nav-footer-title" href="https://codepen.io/uahnbu/pens/public" target="_blank">Information</a><span id="nav-footer-subtitle">Home</span></div>
+                <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+            </div>
+            <div id="nav-footer-content">
+                <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Lorem>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- END NAVBAR  -------------------------->
+
+
+    <script src="./assets/JS/script.js"></script>
+    <script>
+        feather.replace()
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all nav buttons
+            const navButtons = document.querySelectorAll('.nav-button');
+
+            // Add click event listener to each nav button
+            navButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // Get the URL from the data-url attribute of the button
+                    const url = this.dataset.url;
+
+                    // Navigate to the URL
+                    window.location.href = url;
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
