@@ -1456,8 +1456,9 @@ label[for=nav-footer-toggle] {
     background-color: white;
     border-radius: 0.5em;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 35px 2px -20px #e7e7ef;
-    margin-top: 30rem;
+    margin-top: 70rem;
     transition: all .5s ease;
+    transform: translateY(100px);
 }
 
 [mv-app]>[property=headline] {
@@ -1590,6 +1591,136 @@ details[property=tab]:first-child [property=title] {
 
 [mv-app][mv-mode=edit] [property=open] {
     display: none;
+}
+
+
+/*---------------------------------  FOOTER ----------------------------------------------------------*/
+
+.body {
+    display: grid;
+    grid-template-rows: 1fr 20rem auto;
+    grid-template-areas: "main" "." "footer";
+    background: #F5F7FA;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.body .footer {
+    z-index: 1;
+    --footer-background: var(--primary-bg-color);
+    display: grid;
+    position: relative;
+    grid-area: footer;
+}
+
+.body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+.body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+.body .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+
+.body .footer .content a,
+.body .footer .content p {
+    color: #F5F7FA;
+    text-decoration: none;
+}
+
+.body .footer .content b {
+    color: white;
+}
+
+.body .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.body .footer .content>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.body .footer .content>div>div {
+    margin: 0.25rem 0;
+}
+
+.body .footer .content>div>div>* {
+    margin-right: 0.5rem;
+}
+
+.body .footer .content>div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-size {
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@-webkit-keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
 }
 
 

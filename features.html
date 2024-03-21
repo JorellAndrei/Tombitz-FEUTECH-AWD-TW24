@@ -302,14 +302,9 @@
 
         <div class="My-row">
 
-            <div class="video-overlay">
-                <div class="play">
-                    <img class="img-respon" src="https://image.ibb.co/fK1qGa/play.png">
-                </div>
-            </div>
 
-            <video id="bgvid" controls>
-            <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+            <video id="bgvid" autoplay="autoplay" controls="false">
+            <source src="./assets/Images/binfinity.mp4" type="video/webm" >
         </video>
 
         </div>
@@ -1050,6 +1045,22 @@
 
             })
         })
+
+
+
+        var vids = $("video");
+        $.each(vids, function() {
+            this.controls = false;
+        });
+
+        $("video").click(function() {
+            //console.log(this); 
+            if (this.paused) {
+                this.play();
+            } else {
+                this.pause();
+            }
+        });
     </script>
 
 </body>
