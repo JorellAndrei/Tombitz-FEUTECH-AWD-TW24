@@ -15,11 +15,16 @@
 
     <!--scripts-->
     <script src="./assets/JS/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1229210/lottie.js"></script>
     <script src="https://get.mavo.io/stable/mavo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
 </head>
 
 <body>
@@ -74,90 +79,88 @@
 
     <!------------------- HEADER  -------------------------->
 
-    <div class="Header">
-        <div class="Header-background"></div>
-        <div class="Header-content container">
-            <div class="Header-hero">
-                <h1>IT's<br/> Binfinity</h1>
-                <p>You'll be blown away with all it does</p>
-                <button class="Button">Sign up</button>
+    <!-- <center>
+        <div class="header">
+            <div class="Header-background"></div>
+            <div class="Header-content container">
+                <div class="Header-hero">
+                    <h1>IT's<br/> Binfinity</h1>
+                    <p>You'll be blown away with all it does</p>
+                    <button class="Button">Sign up</button>
+                </div>
+                <div class="Header-visuals">
+                    <div class="Iphone "></div>
+                </div>
             </div>
-            <div class="Header-visuals">
-                <div class="Iphone "></div>
+        </div>
+    </center> -->
+
+    <div class="header px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-2">
+            <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+                <div class="max-w-xl mb-6" style="padding-left: 10rem;">
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                        IT's<br class="hidden md:block" /> Binfinity
+                        <span class="inline-block">.</span>
+                    </h2>
+                    <p class="text-base md:text-lg">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+                    </p>
+                </div>
+                <div style="padding-left: 10rem;">
+                    <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                Learn more
+                <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+                </svg>
+              </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center -mx-4 lg:pl-8">
+                <div class="flex flex-col items-end px-3">
+                    <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+                    <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+                </div>
+                <div class="px-3">
+                    <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+                </div>
             </div>
         </div>
     </div>
-
 
     <!------------------- END HEADER  -------------------------->
 
 
     <!------------------- 1ST HOME SECTION  -------------------------->
 
-    <div class="wrap">
-        <div class="back">
-            <div class="back__slide active">
-                <div class="progress"></div>
-            </div>
-            <div class="back__slide">
-                <div class="progress"></div>
-                <div class="back-front-image"></div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card__slide active">
-                <div class="image"></div><span class="number">01</span><span class="date">30 MARCH 2017 <span class="date__time">12:37PM</span></span>
-            </div>
-            <div class="card__slide">
-                <div class="back-image"></div>
-                <div class="image"></div><span class="number">02</span><span class="date">30 MARCH 2017 <span class="date__time">12:37PM</span></span>
-            </div>
-            <div class="content">
-                <div class="content__slide active">
-                    <h2 class="title"> <span class="title__line"> <span class="title__inner">Mesmerizing</span></span><span class="title__line"> <span class="title__inner">Depths</span></span>
+    <div class="px-8 py-16 mx-auto sm:max-w-l md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="p-8 rounded shadow-xl sm:p-16">
+            <div class="flex flex-col lg:flex-row">
+                <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+                    <h2 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                        The quick, brown fox<br class="hidden md:block" /> jumps over
+                        <span class="inline-block text-deep-purple-accent-400">a lazy dog</span>
                     </h2>
-                    <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget <br/> dolor. Mauris ac mattis lectus. Praesent facilisis <br/> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
-                    <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
                 </div>
-                <div class="content__slide">
-                    <h2 class="title"> <span class="title__line"> <span class="title__inner">Breathtaking</span></span><span class="title__line"> <span class="title__inner">Heights</span></span>
-                    </h2>
-                    <p class="desc">Nunc orci metus, ornare non molestie ac, ultrices eget <br/> dolor. Mauris ac mattis lectus. Praesent facilisis <br/> malesuada sapien nec pharetra. Fusce eleifend, nisl.</p>
-                    <div class="button-wrap"><a class="button">Learn More<span class="button__hover"></span></a></div>
+                <div class="lg:w-1/2">
+                    <p class="mb-4 text-base text-gray-700">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut perspiciatis unde omnis iste. Sed ut perspiciatis unde omnis iste error sit voluptatem accusantium doloremque rem aperiam.
+                    </p>
+                    <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
                 </div>
-                <div class="content__ping content__ping--noanimation"></div>
             </div>
         </div>
     </div>
 
+
     <!-- END -->
+
+    <!--------------------- DIVIDER ------------------------------>
 
     <!--------------- 2ND SECTION ----------------------->
 
-    <center>
-        <main mv-app="tabs" mv-bar="no-login" mv-storage="https://github.com/DmitrySharabin/mavo-tabs-widget">
-            <h2 property="headline">Headline</h2>
-            <section mv-list class="tabs" style="--count: [count(tab)];">
-                <details property="tab" mv-list-item open="[open]" mv-action="set(open.$all, false), set(open, true)">
-                    <meta property="open" />
 
-                    <summary property="title">
-                        <img class="icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/undraw_research.svg" mv-attr-src="image" alt="Icon for the [text] tab" />
-                        <span property="text">Tab name</span>
-                    </summary>
 
-                    <section property="content">
-                        <h3 property="headline">Tab headline</h3>
-                        <img property="image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/undraw_research.svg" alt="Illustration for [headline]" />
-                        <p property="text">Tab content</p>
-                        <a property="url" href="#">
-                            <span property="destination">Call to action</span>
-                        </a>
-                    </section>
-                </details>
-            </section>
-        </main>
-    </center>
 
     <!-- END -->
 
@@ -311,8 +314,6 @@
     <!------------------------------ END ----------------------------------->
 
     <script src="./assets/JS/script.js"></script>
-
-
     <script>
         feather.replace()
 
@@ -331,6 +332,9 @@
                 });
             });
         });
+
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
     </script>
 
 </body>

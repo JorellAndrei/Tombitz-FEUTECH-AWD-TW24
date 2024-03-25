@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**-------------------- END -------------------------*/
 
+
+
+/***************************************************** */
 const slideElements = ['.back__slide', '.card__slide', '.content__slide'];
 let inProgress = false;
 
