@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/CSS/contact.css">
+    <script src="https://kit.fontawesome.com/db16af7001.js" crossorigin="anonymous"></script>
 
 
     <!--scripts-->
@@ -75,7 +77,32 @@
 
     <!------------------- START CONTACT  ----------------------->
 
-    
+    <div class="contact">
+
+<form>
+    <div class="row">
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label for="name"> <i class="fa-solid fa-user"></i> Your name</label>
+        </div>
+        <div class="input-group">
+            <input type="text" id="phone" required>
+            <label for="phone"><i class="fa-solid fa-phone"></i> Phone number</label>
+        </div>
+    </div>
+   
+    <div class="input-group">
+        <input type="text" id="email" required>
+        <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+    </div>
+    <div class="input-group">
+        <textarea id="message"  rows="8" required></textarea>
+        <label for="message"><i class="fa-solid fa-message"></i> Your message</label>
+    </div>
+    <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+</form>
+
+    </div>
 
     <!------------------- END CONTACT  ------------------------->
 
