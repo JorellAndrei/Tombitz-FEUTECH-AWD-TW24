@@ -1,67 +1,81 @@
 *{
-    margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    margin: 0;
     box-sizing: border-box;
 }
-.contact{
-    width: 100%;
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(#ffdad5, #fff7f9);
+}
+.contact-container{
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7), #3551b5), url(/assets/Images/logo.gif);
-    background-position: center;
-    background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-form{
-    width: 90%;
-    max-width: 600px;
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
 }
-.input-group{
-    margin-bottom: 30px;
-    position: relative;
+.left-title h2{
+    font-weight: 600;
+    color: #a363aa;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
-input, textarea{
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    font-size: 15px;
+.left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
-label{
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: #fff;
-    cursor: text;
-    transition: 0.2s;
-}
-button{
-    padding: 10px 0;
-    color: #fff;
+.contact-input{
+    width: 400px;
+    height: 50px;
+    border: none;
     outline: none;
-    background: transparent;
-    border: 1px solid #fff;
-    width: 100%;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.contact-left textarea{
+    height: 140px;
+    padding: 15px;
+    border-radius: 20px;
+}
+.contact-input:focus{
+    border: 2px solid #ff994f;
+}
+.contact-input::placeholder{
+    color: #a9a9a9;
+}
+.contact-left button{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
     cursor: pointer;
 }
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label{
-    top: -35px;
-    font-size: 14px;
+.contact-right img{
+    width: 500px;
 }
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.row .input-group{
-    flex-basis: 48%;
+@media (max-width:800px) {
+    .contact-input{
+        width: 80vw;
+    }
+    .contact-right {
+        display: none;
+    }
+
 }
