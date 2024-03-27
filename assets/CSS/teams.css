@@ -1,0 +1,122 @@
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4eb990;
+    position: relative;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, gray, black);
+    position: relative;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      transparent -10%,
+      black 25%
+    );
+  }
+  
+  .card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    brightness: 0.5;
+  }
+  
+  .title,
+  .character {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .title {
+    transition: transform 0.5s;
+  }
+  
+  .card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .character {
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+  .card:hover .character {
+    opacity: 1;
+  }
+
+  
+  
+  button {
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 18px;
+    border-radius: 25px; /* Adjust border-radius to change button shape */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #62aeda; /* Change background color */
+    box-shadow: 0 4px #585858; /* Change shadow color */
+  }
+  
+  .button:hover {
+    background-color: #b7ddbd; /* Change hover background color */
+  }
+  
+  
+  
