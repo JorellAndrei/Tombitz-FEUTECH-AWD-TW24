@@ -1,122 +1,214 @@
-:root {
-    --card-height: 300px;
-    --card-width: calc(var(--card-height) / 1.5);
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #4eb990;
-    position: relative;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to right, gray, black);
-    position: relative;
-  }
-  
-  .card-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .card {
-    width: var(--card-width);
-    height: var(--card-height);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 36px;
-    perspective: 2500px;
-    margin: 0 50px;
-  }
-  
-  .cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .wrapper {
-    transition: all 0.5s;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: radial-gradient(
-      circle at var(--x, 50%) var(--y, 50%),
-      transparent -10%,
-      black 25%
-    );
-  }
-  
-  .card:hover .wrapper {
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    brightness: 0.5;
-  }
-  
-  .title,
-  .character {
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-  }
-  
-  .title {
-    transition: transform 0.5s;
-  }
-  
-  .card:hover .title {
-    transform: translate3d(0%, -50px, 100px);
-  }
-  
-  .character {
-    opacity: 0;
-    transition: all 0.5s;
-    transform: translate3d(0%, -30%, 100px);
-  }
-  
-  .card:hover .character {
-    opacity: 1;
-  }
+    /**** Sass Variables ****/
+$bodyFont: 'Open Sans', sans-serif;
 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFont;
+  background: #333;
+}
+
+.container {
+  max-width: -10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  margin: 175px; 
+
+}
+
+.card {
+  position: absolute;
+  left: 10%;
+  width: 350px;
+  height: 450px;
+  transform: translate(-50%, -50%);
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
   
+  .card-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #ffffff;
+    transition: .5s;
+  }
   
-  button {
-    border: none;
-    color: white;
-    padding: 15px 20px;
+  &:hover img {
+    opacity: 0.4;
+    transition: .5s;
+  }
+}
+
+.card:hover .card-image {
+  transform: translateY(-100px);
+  transition: all .9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  
+  li {
+    list-style: none;
+    
+    a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #fff;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: .4s;
+      transform: translateY(200px);
+      opacity: 0;
+    } 
+  }
+}
+
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1; 
+}
+
+.social-icons li a:hover {
+  background: #000; 
+  transition: .2s;
+  .fab {
+    color: #fff;
+  } 
+}
+
+.social-icons li a .fab {
+  transition: .8s;
+    
+  &:hover {
+      transform: rotateY(360deg);
+      color: #fff;
+  } 
+}
+
+.card:hover li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+
+  h2 {
+    margin: 30px 0;
+    padding: 0;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 18px;
-    border-radius: 25px; /* Adjust border-radius to change button shape */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: #62aeda; /* Change background color */
-    box-shadow: 0 4px #585858; /* Change shadow color */
+     
+    .job-title {
+        font-size: 1rem;
+        line-height: 2.5rem;
+        color: #333;
+        font-weight: 300;
+    }
   }
-  
-  .button:hover {
-    background-color: #b7ddbd; /* Change hover background color */
-  }
-  
-  
-  
+}
+
+.jane {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  opacity: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 3;
+  padding: 10px;
+  transition: .4s;
+}
+
+.profile-two .social-icons li a {
+  border-radius: 50%;
+}
+
+.card:hover .profile-img--two {
+  transform: rotateY(180deg);
+}
+
+.card:hover .jane {
+  bottom: 0;
+  left: 0;
+  transition-delay: 0.5s;
+  opacity: 1;
+}
+
+
+.banner {
+  background-color: #99ca8d;
+  color: #181717;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.banner h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(233, 195, 195, 0.5);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.banner h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #fff;
+  margin: 20px auto;
+}
