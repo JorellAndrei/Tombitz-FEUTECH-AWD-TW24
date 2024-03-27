@@ -9,6 +9,7 @@
 
     <!--styles-->
     <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <link rel="stylesheet" href="./assets/CSS/teams.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -72,6 +73,62 @@
 
     <!------------------- END NAVBAR  -------------------------->
 
+    <!------------------- TEAM CARDS  -------------------------->
+
+ <a href="https://github.com/JorellAndrei" alt="Leader" target="_blank" class="card-link">
+        <div class="card">
+            <div class="wrapper">
+                <img src="./assets/Images/6.jpg" class="cover-image" />
+            </div>
+            <img src="./assets/Images/1.jpg" class="character" />
+        </div>
+        <button class="button button1">Jorell Andrei Pagulayan</button>
+    </a>
+
+    <a href="https://github.com/larehluwi" alt="Member" target="_blank" class="card-link">
+        <div class="card">
+            <div class="wrapper">
+                <img src="./assets/Images/8.jpg" class="cover-image" />
+            </div>
+            <img src="./assets/Images/3.jpg" class="character" />
+        </div>
+        <button class="button button1">Larry Louie Lacandazo</button>
+
+    </a>
+
+    <a href="https://github.com/Markiel25" alt="Member" target="_blank" class="card-link">
+        <div class="card">
+            <div class="wrapper">
+                <img src="./assets/Images/9.jpg" class="cover-image" />
+            </div>
+            <img src="./assets/Images/4.jpg" class="character" />
+        </div>
+        <button class="button button1">Markiel Leones</button>
+    </a>
+
+    <a href="https://playvalorant.com/en-us/agents/phoenix/" alt="Member" target="_blank" class="card-link">
+        <div class="card">
+            <div class="wrapper">
+                <img src="./assets/Images/.jpg" class="cover-image" />
+            </div>
+            <img src="./assets/Images/2.jpg" class="character" />
+        </div>
+        <button class="button button1">Julia Mendoza</button>
+    </a>
+
+
+
+    <a href="https://github.com/heykyy" alt="Member" target="_blank" class="card-link">
+        <div class="card">
+            <div class="wrapper">
+                <img src="./assets/Images/10.jpg" class="cover-image" />
+            </div>
+            <img src="./assets/Images/5.png" class="character" />
+        </div>
+        <button class="button button1">Kyla Gean Manalo</button>
+    </a>
+
+    <!------------------- END TEAM CARDS  -------------------------->
 
 
     <script src="./assets/JS/script.js"></script>
@@ -93,6 +150,13 @@
                 });
             });
         });
+
+        const mouseEvent = document.documentElement.style;
+
+mouseEvent.addEventListener('mousemove', (e) => {
+    mouseEvent.setProperty('--x', e.clientX + 'px');
+    mouseEvent.setProperty('--y', e.clientY + 'px');
+});
     </script>
 
 </body>
