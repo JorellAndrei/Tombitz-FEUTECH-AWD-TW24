@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "feather-icons": "^4.29.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
