@@ -38,7 +38,7 @@ ul {
 /*------------------------  NAVBAR -------------------------------*/
 
 #nav-toggle:checked~#nav-header {
-    width: calc(var(--navbar-width-min) - 16px);
+    width: calc(var(--navbar-width-min) - 6px);
 }
 
 #nav-toggle:checked~#nav-content,
@@ -700,11 +700,6 @@ label[for=nav-footer-toggle] {
 
 
 /*-------------------------------- 1ST SECTION --------------------------------------------*/
-
-.sec1 {
-    margin-top: -10rem;
-    background-color: white;
-}
 
 
 /*---------------------------------  2ND SECTION ----------------------------------------------------------*/
