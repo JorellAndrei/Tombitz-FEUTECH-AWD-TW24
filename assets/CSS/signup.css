@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #111;
+    background: #6bab78;
     width: 100%;
     overflow: hidden;
 }
@@ -28,7 +28,7 @@ body {
 .ring i {
     position: absolute;
     inset: 0;
-    border: 2px solid #fff;
+    border: 2px solid #245441;
     transition: 0.5s;
 }
 
@@ -79,11 +79,13 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    font-weight: 700;
 }
 
 .login h2 {
     font-size: 2em;
     color: #245441;
+    font-weight: 700;
 }
 
 .login .inputBx {
@@ -96,18 +98,19 @@ body {
     width: 100%;
     padding: 12px 20px;
     background: transparent;
-    border: 2px solid #245441;
+    border: 2px solid #ffffff;
     border-radius: 40px;
     font-size: 1.2em;
-    color: #245441;
+    color: #ffffff;
     box-shadow: none;
     outline: none;
+    font-weight: 700;
 }
 
 .login .inputBx input[type="button"] {
     width: 100%;
     background: #0078ff;
-    background: linear-gradient(45deg, #ff357a, #fff172);
+    background: linear-gradient(45deg, #245441, #2c4c74);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -118,7 +121,7 @@ body {
 }
 
 .login .inputBx input::placeholder {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(88, 83, 83, 0.75);
 }
 
 .login .links {
@@ -128,9 +131,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    color: #245441;
 }
 
 .login .links a {
-    color: #fff;
+    color: #245441;
     text-decoration: none;
+    font-weight: 700;
 }

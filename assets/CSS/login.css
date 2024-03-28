@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #111;
+    background: #245441;
     width: 100%;
     overflow: hidden;
 }
@@ -28,7 +28,7 @@ body {
 .ring i {
     position: absolute;
     inset: 0;
-    border: 2px solid #fff;
+    border: 2px solid #6bab78;
     transition: 0.5s;
 }
 
@@ -99,15 +99,16 @@ body {
     border: 2px solid #fff;
     border-radius: 40px;
     font-size: 1.2em;
-    color: #fff;
+    color: #245441;
     box-shadow: none;
     outline: none;
+    font-weight: 900;
 }
 
 .login .inputBx input[type="button"] {
     width: 100%;
     background: #0078ff;
-    background: linear-gradient(45deg, #ff357a, #fff172);
+    background: linear-gradient(45deg, #6bab78, #dee2dd);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;

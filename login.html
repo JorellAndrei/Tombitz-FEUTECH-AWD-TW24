@@ -28,14 +28,14 @@
             <p id="text_show" style="color: #ffffff; font-size: 12px; "></p>
             <div class="links">
                 <a href="#">Forget Password</a>
-                <a href="#">Signup</a>
+                <a href="./signup.html" style="font-weight: 900; text-decoration:underline;">Signup</a>
             </div>
         </div>
     </div>
     <!--ring div ends here-->
 
     <script>
-        function login (){
+        function login() {
             let userName = document.getElementById('username').value;
             let passWord = document.getElementById('password').value;
             let text_show = document.getElementById('text_show');
@@ -43,48 +43,39 @@
             let user = "juliaansh";
             let pass = "123456";
 
-            if(userName == user && passWord == pass){
+            if (userName == user && passWord == pass) {
                 sessionStorage.setItem('username', userName);
                 window.location = "home.html";
-            }
-
-            else if(userName == "" && passWord == ""){
+            } else if (userName == "" && passWord == "") {
                 text_show.innerHTML = "Enter username and password";
-            }
-
-            else if(userName == user && passWord !== pass){
-                document.getElementById("username").style.border="2px solid white";
-                document.getElementById("password").style.border="2px solid red";
+            } else if (userName == user && passWord !== pass) {
+                document.getElementById("username").style.border = "2px solid white";
+                document.getElementById("password").style.border = "2px solid red";
 
                 text_show.innerHTML = "Incorrect password";
-            }
-
-            else if(userName !== user){
-                document.getElementById("username").style.border="2px solid red";
-                document.getElementById("password").style.border="2px solid white";
+            } else if (userName !== user) {
+                document.getElementById("username").style.border = "2px solid red";
+                document.getElementById("password").style.border = "2px solid white";
                 text_show.innerHTML = "Incorrect username or sign up";
-            }
-
-            else{
+            } else {
                 text_show.innerHTML = "Incorrect username and password";
             }
 
         }
 
-        window.onload = function () {
+        window.onload = function() {
             window.history.replaceState(null, null, window.location.href);
         };
 
         // Disable back navigation after logout
-        window.addEventListener('popstate', function () {
+        window.addEventListener('popstate', function() {
             window.history.pushState(null, null, window.location.href);
         });
 
         history.pushState(null, null, location.href);
-        window.onpopstate = function () {
+        window.onpopstate = function() {
             history.go(1);
         };
-
     </script>
 </body>
 
