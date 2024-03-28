@@ -501,7 +501,7 @@ body {
 
 .apps-gallery {
     min-height: 800px;
-    background-color: #3C3852;
+    background-color: #302f2f;
     color: white;
 }
 
@@ -576,74 +576,6 @@ body {
 /*End apps-gallery*/
 
 
-/*start Our-Testimonial*/
-
-.Our-Testimonial {
-    background-image: url("https://preview.ibb.co/crS82F/testbg.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-}
-
-.Our-Testimonial ul.Slider-2 {
-    width: 700%;
-    list-style-type: none;
-    overflow: hidden;
-    padding-left: 0px;
-    padding-right: 0px;
-    /* margin-left: -10px;*/
-    /* this is for pushing slider to show slides list*/
-}
-
-.Our-Testimonial .Slider-2>li.Slide {
-    height: 368px;
-    width: 14.285714%;
-    float: left;
-    display: inline-block;
-    padding: 0px 100px;
-}
-
-.Our-Testimonial .Slider-2 li .half-center {
-    margin: auto;
-    width: 50%;
-}
-
-.Our-Testimonial .My-row {
-    position: relative;
-}
-
-.Our-Testimonial .My-row .indecators {
-    position: absolute;
-    bottom: 100px;
-    width: 100%;
-}
-
-.Our-Testimonial .My-row .indecators .wrap-span {
-    width: 50%;
-    margin: auto;
-}
-
-.Our-Testimonial .My-row .indecators span {
-    height: 15px;
-    width: 15px;
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    background-color: lightgray;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.Our-Testimonial .My-row .indecators span.active {
-    height: 17px;
-    width: 17px;
-}
-
-
-/*End apps-gallery*/
-
-
 /*start Contact*/
 
 .Contact {
@@ -673,8 +605,8 @@ body {
     border-radius: 0px 10px 10px 0px;
     outline: none;
     margin-left: -4px;
-    background-color: #FF3366;
-    border: 1px solid #FF3366;
+    background-color: #6bab78;
+    border: 1px solid #6bab78;
     color: #ffffff;
 }
 
