@@ -104,12 +104,17 @@ body {
     outline: none;
 }
 
-.login .inputBx input[type="submit"] {
+.login .inputBx input[type="button"] {
     width: 100%;
     background: #0078ff;
     background: linear-gradient(45deg, #ff357a, #fff172);
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login .inputBx input[type="button"]:hover {
+    transform: scale(1.05);
 }
 
 .login .inputBx input::placeholder {
