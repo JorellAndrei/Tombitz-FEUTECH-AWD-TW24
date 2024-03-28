@@ -26,6 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
 </head>
 </head>
 
@@ -43,7 +45,7 @@
 
     <div id="nav-bar" style="z-index: 2;">
         <input id="nav-toggle" type="checkbox" />
-        <div id="nav-header"><a id="nav-title" href="https://codepen.io" target="_blank">ITs<i class="fab fa-bin"></i> Binfinity</a>
+        <div id="nav-header"><a id="nav-title" href="https://drive.google.com/file/d/1Qskt0yT_P-fnrO6xYQvqhL7MG5HGZ-Dj/view?usp=sharing" target="_blank">ITs<i class="fab fa-bin"></i> Binfinity</a>
             <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
             <hr/>
         </div>
@@ -74,12 +76,14 @@
         <input id="nav-footer-toggle" type="checkbox" />
         <div id="nav-footer">
             <div id="nav-footer-heading">
-                <div id="nav-footer-avatar"><img src="./index.html" /></div>
-                <div id="nav-footer-titlebox"><a id="nav-footer-title" href="https://codepen.io/uahnbu/pens/public" target="_blank">Information</a><span id="nav-footer-subtitle">Home</span></div>
+                <div id="nav-footer-avatar">
+                    <img src="./assets/Images/wired-lineal-63-home.gif" alt="">
+                </div>
+                <div id="nav-footer-titlebox"><a id="nav-footer-title" href="#1stsec">Home</a><span id="nav-footer-subtitle">Information</span></div>
                 <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
             </div>
             <div id="nav-footer-content">
-                <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Lorem>
+                <Lorem>Our home page serves as a gateway to our brand, offering users a glimpse into what we have to offer and enticing them to explore further. </Lorem>
             </div>
         </div>
     </div>
@@ -89,21 +93,6 @@
 
     <!------------------- HEADER  -------------------------->
 
-    <!-- <center>
-        <div class="header">
-            <div class="Header-background"></div>
-            <div class="Header-content container">
-                <div class="Header-hero">
-                    <h1>IT's<br/> Binfinity</h1>
-                    <p>You'll be blown away with all it does</p>
-                    <button class="Button">Sign up</button>
-                </div>
-                <div class="Header-visuals">
-                    <div class="Iphone "></div>
-                </div>
-            </div>
-        </div>
-    </center> -->
 
     <div style="background-color:#245441;" class="header px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20">
         <div class="grid gap-10 lg:grid-cols-2">
@@ -143,7 +132,7 @@
 
     <!------------------- 1ST HOME SECTION  -------------------------->
 
-    <div style="background-color: white;" class=" relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
+    <div style="background-color: white;" id="1stsec" class="relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
         <div class=" z-0 flex justify-center h-full -mx-4 overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 lg:w-1/2 lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
             <img class="test" id="test" onscroll="Animation();" src="./assets/Images/laptop.png" style="width: 80rem; transform: translateX(-100rem);" alt="" />
         </div>
@@ -674,6 +663,13 @@
             });
         });
 
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
 
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
