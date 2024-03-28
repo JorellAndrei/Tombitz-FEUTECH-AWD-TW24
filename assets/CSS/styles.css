@@ -392,6 +392,10 @@ label[for=nav-toggle] {
     transition: 0.2s;
 }
 
+#nav-footer-avatar img {
+    height: 100%;
+}
+
 #nav-footer-titlebox {
     position: relative;
     margin-left: 16px;
