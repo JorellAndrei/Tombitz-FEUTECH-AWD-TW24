@@ -232,24 +232,19 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const username = sessionStorage.getItem('isLoggedIn') === 'true' ? sessionStorage.getItem('username') : '';
-            const profileNameElement = document.querySelector('.profile-card__name');
-            if (profileNameElement && username) {
-                profileNameElement.innerText = username;
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the Log Out button
-            var logoutButton = document.getElementById('logoutBtn');
-    
-            // Add click event listener
-            logoutButton.addEventListener('click', function() {
-                // Redirect to login.html
-                window.location.href = 'login.html';
-            });
-        });
+        window.onload = function () {
+          let username = sessionStorage.getItem('username'); 
+          if (username) {
+              document.querySelector('.profile-card__name').innerText = username; 
+          } else {
+              // Handle case where username is not found in session storage
+          }
+      };
+  
+      document.getElementById('logoutBtn').addEventListener('click', function () {
+          sessionStorage.removeItem('username'); // Remove username from session storage on logout
+          window.location = "login.html"; 
+      });
         
     </script>
 
