@@ -16,6 +16,7 @@
 
     <!--scripts-->
     <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/home.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
@@ -28,7 +29,15 @@
 </head>
 </head>
 
-<body style="background-color: white;">
+<style>
+    body.preload * {
+        animation-duration: 0s !important;
+        -webkit-animation-duration: 0s !important;
+        transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+    }
+</style>
+
+<body style="background-color: white;" class="preload">
     <!------------------- NAVBAR  -------------------------->
 
 
@@ -98,11 +107,11 @@
 
     <div style="background-color:#245441;" class="header px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20">
         <div class="grid gap-10 lg:grid-cols-2">
-            <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+            <div class="flex flex-col md:pr-8 xl:pr-0 lg:max-w-lg">
                 <div class="max-w-xl mb-6" style="padding-left: 10rem;">
-                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                    <h2 style="font-size: 5rem; text-align: left;" class="max-w-lg mb-6 font-sans text-1xl font-bold tracking-tight sm:text-2xl sm:leading-none">
                         IT's<br class="hidden md:block" /> Binfinity
-                        <span class="inline-block">.</span>
+                        <span class="inline-block"></span>
                     </h2>
                     <p class="text-base md:text-lg">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
@@ -117,13 +126,13 @@
               </a>
                 </div>
             </div>
-            <div class="flex items-center justify-center -mx-4 lg:pl-8">
-                <div class="flex flex-col items-end px-3">
-                    <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
-                    <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
-                </div>
-                <div class="px-3">
-                    <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+            <div class="flex items-center justify-center -mx-4 lg:pl-1">
+                <!-- <div class="flex flex-col items-end px-3">
+                    <img class="floatIphone mb-6 h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="./assets/Images/3Diphone-8.png" alt="" />
+                    <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="./assets/Images/3Diphone-8.png" alt="" />
+                </div> -->
+                <div class="px-10">
+                    <img class="floatIphone w-49" src="./assets/Images/3Diphone-8.png" alt="" />
                 </div>
             </div>
         </div>
@@ -135,8 +144,8 @@
     <!------------------- 1ST HOME SECTION  -------------------------->
 
     <div style="background-color: white;" class=" relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
-        <div class="z-0 flex justify-center h-full -mx-4 overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 lg:w-1/2 lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
-            <img src="./assets/Images/laptop.png" style="width: 80rem; transform: translateX(-90px);" alt="" />
+        <div class=" z-0 flex justify-center h-full -mx-4 overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 lg:w-1/2 lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
+            <img class="test" id="test" onscroll="Animation();" src="./assets/Images/laptop.png" style="width: 80rem; transform: translateX(-100rem);" alt="" />
         </div>
         <div class="relative flex justify-end max-w-xl mx-auto xl:pr-32 lg:max-w-screen-xl">
             <div class="mb-16 lg:pr-5 lg:max-w-lg lg:mb-0">
@@ -193,9 +202,8 @@
                 </p>
             </div>
             <div class="mx-auto lg:max-w-2xl">
-                <div class="relative w-full transition-shadow duration-300 hover:shadow-xl">
-                    <img class="rounded" src="./assets/Images/devices.png" alt="" />
-
+                <div class="relative w-full">
+                    <img class="test2" id="test2" onscroll="Animation();" src="./assets/Images/devices.png" alt="" />
                 </div>
             </div>
         </div>
@@ -214,7 +222,7 @@
                     </div>
                     <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                         Everything You Sort<br class="hidden md:block" />
-                        <span style="color: #6bab78;" class="inline-block text-deep-purple-accent-400">Becomes an Adventure</span>
+                        <span style="color: #245441;" class="inline-block text-deep-purple-accent-400">Becomes an Adventure</span>
                     </h2>
                     <p class="text-base text-gray-700 md:text-lg">
                         Embark on an exciting journey of environmental responsibility and discovery with BINFINITY, the ultimate waste management app packed with innovative features designed to engage, educate, and inspire.
@@ -229,12 +237,12 @@
                     </a>
                 </div>
             </div>
-            <div class="flex items-center justify-center lg:w-1/2">
+            <div class="hvr-main flex items-center justify-center lg:w-1/2">
                 <div class="w-2/6">
-                    <img class="object-cover" src="./assets/Images/3Diphone-6.png" alt="" />
+                    <img class="backw object-cover" src="./assets/Images/3Diphone-6.png" alt="" />
                 </div>
                 <div class="w-5/12 -ml-16 lg:-ml-12">
-                    <img class="object-cover" src="./assets/Images/3Diphone-5.png" alt="" />
+                    <img class="forw object-cover" src="./assets/Images/3Diphone-5.png" alt="" />
                 </div>
             </div>
         </div>
@@ -255,7 +263,7 @@
             <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="none slice">
             <path d="M50 0H100L50 100H0L50 0Z"></path>
           </svg>
-            <img class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <img class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full" src="./assets/Images/poster.png" alt="" />
         </div>
         <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div style="transform:translateX(5rem);" class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
@@ -270,10 +278,11 @@
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
                 </p>
                 <div class="flex items-center">
-                    <a href="/" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                    <a href="./about.html" style="color: #245441;" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400">
                 Get started
               </a>
-                    <a href="/" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a>
+                    <p href="" style="cursor: pointer;" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">
+                        << Learn more</p>
                 </div>
             </div>
         </div>
@@ -288,7 +297,7 @@
         <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <div>
                 <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                    Brand new
+                    Share your Feedback
                 </p>
             </div>
             <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -301,25 +310,26 @@
                 </defs>
                 <rect fill="url(#9ef1ff62-feb2-41fe-8163-772b4c79de7b)" width="52" height="24"></rect>
               </svg>
-              <span class="relative">The</span>
+              <span class="relative">Why</span>
                 </span>
-                quick, brown fox jumps over a lazy dog
+                Your Feedback Matters?
             </h2>
             <p class="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+                Your feedback drives our efforts to enhance our products helps us identify areas for improvement and implement changes transparently.
+                <br>Thank you for taking the time to share your thoughts with us. Together, we can create better experiences for everyone.
             </p>
         </div>
-        <form class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
-            <input placeholder="Email" required="" type="text" class="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+        <form method="POST" action="mailto:jorellandrei23@gmail.com" enctype="multipart/form-data" class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
+            <input placeholder="Send your Feedback" required="" type="text" class="flex-grow w-9 h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-1 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             />
-            <button type="submit" class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-            Subscribe
+            <button type="submit" value="Submit" class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+            Send
           </button>
         </form>
         <p class="max-w-md mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+            Send us an email with your feedback directly to <a style="color: #245441; font-weight: 500;" href="mailto:jorellandrei23@gmail.com">its.binfinity@yahoo.com</a>.
         </p>
-        <img src="https://kitwind.io/assets/kometa/half-phone.png" class="w-full mx-auto md:w-auto md:max-w-xs" alt="" />
+        <img src="./assets/Images/3Diphone-8 - Copy.png" class="w-full mx-auto md:w-auto md:max-w-90 max-h-85" alt="" />
     </div>
 
     <!-- END -->
@@ -335,14 +345,15 @@
                 </div>
                 <div class="px-6 py-8 border border-t-0 rounded-b sm:px-8">
                     <h5 class="mb-2 text-xl font-bold leading-none sm:text-2xl">
-                        Join Team
+                        Meet Our Team
                     </h5>
                     <p class="mb-5 text-gray-700">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut perspiciatis unde.
+                        We have a diverse and talented team dedicated to delivering exceptional results. Get to know the individuals behind our Design Thinking Project
                     </p>
-                    <button type="submit" class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-                Read more
-              </button>
+                    <a href="./team.html" class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        style="color: #245441;">
+                See More
+              </a>
                 </div>
             </div>
             <div class="transition duration-300 transform bg-white rounded shadow-sm hover:-translate-y-1 hover:shadow md:text-center">
@@ -351,11 +362,12 @@
                     <div class="absolute inset-0 bg-gray-800 bg-opacity-25"></div>
                 </div>
                 <div class="px-6 py-8 border border-t-0 rounded-b sm:px-8">
-                    <h5 class="mb-2 text-xl font-bold leading-none sm:text-2xl">Hire Us</h5>
+                    <h5 class="mb-2 text-xl font-bold leading-none sm:text-2xl">Know Us More</h5>
                     <p class="mb-5 text-gray-700">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut perspiciatis unde.
+                        Explore our qualifications, experiences, and skills by viewing our detailed resumes. Click the button below to access our resumes
                     </p>
-                    <button type="submit" class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                    <button type="submit" class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        style="color: #245441;">
                 Read more
               </button>
                 </div>
@@ -640,7 +652,9 @@
 
     <!------------------------------ END ----------------------------------->
 
+    <script src="./assets/JS/home.js"></script>
     <script src="./assets/JS/script.js"></script>
+
     <script>
         feather.replace()
 
@@ -660,8 +674,20 @@
             });
         });
 
+
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
+    </script>
+    <script type="text/javascript">
+        {
+            window.addEventListener("scroll", Animation);
+
+            function Animation() {
+                $("#test:visible").addClass("animated slide-right");
+                $("#test2:visible").addClass("slide-top");
+            }
+
+        }
     </script>
 
 </body>
