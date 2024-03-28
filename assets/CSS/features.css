@@ -1,4 +1,23 @@
-/* Main Css Rules  for Main Elements in The project */
+/*------------------------------- FONTS ---------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*------------------------------- General ---------------------------------*/
+
+:root {
+    --primary-color: #6bab78;
+    --secondary-color: #dee2dd;
+    --primary-bg-color: #245441;
+    --secondary-bg-color: #696c67;
+    --backup-color: #256bd3;
+    --darkerbackup-color: #2c4c74;
+    --backup-color2: #e74b25;
+    --btn-color: #3b3b44;
+    --darkerbtn-color: #302f2f;
+    --text-color: #ffffff;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+}
 
 * {
     box-sizing: border-box;
@@ -11,6 +30,9 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
+    font-family: "Montserrat";
+    background: rgb(107, 171, 120);
+    background: linear-gradient(300deg, rgba(107, 171, 120, 1) 0%, #1d4b38 100%);
 }
 
 .container {
@@ -29,7 +51,7 @@ body {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: rgba(255, 51, 102, 0.55);
+    background-color: #6bab78;
     color: white;
     display: none;
     cursor: pointer;
@@ -149,7 +171,7 @@ body {
 }
 
 .h-1 {
-    font-size: 110px;
+    font-size: 115px;
     color: var(--primary-color);
 }
 
@@ -197,7 +219,7 @@ body {
 
 .text-iphone-wrapper button:nth-of-type(2) {
     background-color: white;
-    color: #585b60;
+    color: #6bab78;
     line-height: 27px;
 }
 
@@ -218,8 +240,8 @@ body {
 }
 
 .text-iphone-wrapper button:hover {
-    background-color: #FF3366;
-    color: white;
+    background-color: white;
+    color: #1d4b38;
 }
 
 .text-iphone-wrapper button:hover span {
@@ -231,7 +253,7 @@ body {
     height: 50px;
     margin: auto;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid #6bab78;
     transition: all 0.4s ease;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -255,22 +277,26 @@ body {
 
 .our-work {
     min-height: 500px;
+    color: white;
 }
 
 .our-work h3 {
     padding: 10px 0px;
+    color: #6bab78;
 }
 
 .our-work .Circle {
     width: 80px;
     height: 80px;
-    border: 1px solid #585b60;
+    border: 1px solid white;
     text-align: center;
     border-radius: 50%;
+    color: white;
 }
 
 .our-work .Circle i {
     line-height: 80px;
+    color: white;
 }
 
 .our-work .box {
@@ -289,7 +315,7 @@ body {
 .Description-Third {
     min-height: 600px;
     background-color: #F9F9F9;
-    color: #585b60;
+    color: #1d4b38;
 }
 
 .Our-Works-2 .Circle,
@@ -369,7 +395,7 @@ body {
 /*start Description */
 
 .Description .Circle {
-    border: 1px solid #FF3366;
+    border: 1px solid #1d4b38;
 }
 
 .Description .box,
@@ -378,7 +404,16 @@ body {
 }
 
 .Description .Circle i {
-    color: #FF3366;
+    color: #1d4b38;
+}
+
+.Description .h-1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.Description .img-respon {
+    max-width: 80%;
 }
 
 
@@ -398,6 +433,20 @@ body {
 .Description-inverse {
     background-color: white;
     min-height: 500px;
+}
+
+.Description-inverse .h-1 {
+    font-size: 70px;
+}
+
+.Description-inverse .h-1,
+.Description-inverse p {
+    margin-left: 2rem;
+}
+
+.Description-inverse .img-respon {
+    margin-left: 2rem;
+    max-width: 85%;
 }
 
 
@@ -424,6 +473,18 @@ body {
 
 .Description-Third .info-box {
     padding-top: 60px;
+}
+
+.Description-Third .h-1 {
+    font-size: 70px;
+}
+
+.Description-Third p {
+    color: #1d4b38;
+}
+
+.Description-Third .img-respon {
+    max-width: 80%;
 }
 
 
@@ -507,98 +568,12 @@ body {
     height: 500px;
 }
 
+.apps-gallery .img-respon {
+    max-width: 80%;
+}
+
 
 /*End apps-gallery*/
-
-
-/*start Our-Pricing*/
-
-.Our-Pricing {
-    min-height: 700px;
-    color: #585b60;
-}
-
-.Our-Pricing .Price-box {
-    width: 29%;
-    border: 1px solid #F9F9F9;
-    background-color: #F9F9F9;
-    background-color: #0F9E5E;
-    float: left;
-    border: 1px solid #aaaaaa;
-    transition: all 0.4s ease;
-    position: relative;
-    margin-left: 3.5%;
-}
-
-.Our-Pricing .Price-box:hover {
-    border: 1px solid #FF3366;
-    transform: scale(1.1);
-}
-
-.Our-Pricing .Price-box .first-box,
-.Our-Pricing .Price-box .second-box,
-.Our-Pricing .Price-box .third-box {
-    background-color: #F9F9F9;
-    padding: 15px;
-}
-
-.Our-Pricing .Price-box .second-box {
-    background-color: white;
-    border-bottom: 1px solid #aaaaaa;
-}
-
-.Our-Pricing .Price-box:nth-of-type(2):after {
-    content: "Popular";
-    display: block;
-    padding: 8px;
-    position: absolute;
-    right: 0px;
-    top: 55px;
-    background-color: #FF3366;
-    color: white;
-}
-
-.Our-Pricing .Price-box .second-box ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    list-style-type: none;
-}
-
-.Our-Pricing .Price-box .second-box ul li {
-    margin-bottom: 20px;
-}
-
-.second-box ul img {
-    padding-right: 5px;
-}
-
-.Our-Pricing .Price-box .third-box {
-    color: #aaaaaa;
-    padding-bottom: 30px;
-}
-
-.Our-Pricing .Price-box .third-box .h-1 {
-    color: #585b60;
-    font-size: 50px;
-    padding: 5px;
-    display: inline-block;
-}
-
-.Our-Pricing .Price-box .third-box button {
-    background-color: #FF3366;
-    border: 1px solid #FF3366;
-    color: white;
-    width: 150px;
-    margin-right: 20px;
-    height: 40px;
-    border-radius: 10px 10px 10px 10px;
-    outline: none;
-    cursor: pointer;
-}
-
-
-/*End Our-Pricing*/
 
 
 /*start Our-Testimonial*/
@@ -669,52 +644,10 @@ body {
 /*End apps-gallery*/
 
 
-/*start Clients-logo*/
-
-.Clients-logo {
-    color: #3C3852;
-    min-height: 300px;
-    background-color: #DDDDDD;
-    padding-top: 20px;
-}
-
-.Clients-logo .h-1 {
-    margin-top: 0px;
-}
-
-.Clients-logo .My-row .img-wrapper {
-    margin-top: 20px;
-    height: 50px;
-    margin-left: 3%;
-}
-
-.Clients-logo .My-row .img-wrapper img {
-    height: 100%;
-}
-
-
-/*End Clients-logo*/
-
-
-/*start Download*/
-
-.Download-wrap {
-    padding-left: 13%;
-}
-
-.Download p {
-    color: #696969;
-}
-
-
-/*End Download*/
-
-
 /*start Contact*/
 
 .Contact {
-    color: #ffffff;
-    background-image: url("https://preview.ibb.co/gwZfGa/subbg.jpg");
+    background-image: url("/assets/Images/poster.png");
     background-size: cover;
     background-position: center center;
 }
@@ -769,7 +702,8 @@ textarea:focus::-webkit-input-placeholder {
 
 .message {
     min-height: 500px;
-    background-color: #DDDDDD;
+    background-color: white;
+    font-weight: 500;
 }
 
 .message .My-row {
