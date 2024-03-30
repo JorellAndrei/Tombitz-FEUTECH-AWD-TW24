@@ -355,7 +355,23 @@ body {
     padding-top: 10px;
 }
 
+.green-button {
+    background-color: #6bab78; /* Green color */
+    color: #0f0f0f; /* White text color */
+    top: 10px;
+    padding: 10px 10px; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold font weight */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+}
 
+.green-button:hover {
+    background-color: #d9ebdc; /* Darker green color on hover */
+}
 /* End our-work*/
 
 
