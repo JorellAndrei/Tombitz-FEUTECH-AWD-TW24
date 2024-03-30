@@ -44,6 +44,11 @@ body {
 
 /*  End of Main Css Rules  */
 
+.maintt {
+    color: white;
+    text-shadow: -5px 5px 0px #ffffff, -10px 10px 0px #6bab78, -15px 15px 0px #245441;
+}
+
 
 /* start My framWork */
 
