@@ -77,6 +77,13 @@
             });
         }
     );
+
+    myAudio = document.getElementById("audio1");
+
+    function setHalfVolume() {
+        var myAudio = document.getElementById("audio1");
+        myAudio.volume = 0.01; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+    }
 </script>
 </head>
 
@@ -135,8 +142,8 @@
 
     <!------------------- END NAVBAR  -------------------------->
 
-    <audio nocontrols autoplay>
-        <source src="horse.mp3" type="audio/mpeg">
+    <audio id="audio1" nocontrol autoplay onloadeddata="setHalfVolume()">
+        <source src="./assets/Images/bgmusic.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
 
