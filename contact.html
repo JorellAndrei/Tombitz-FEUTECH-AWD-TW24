@@ -79,35 +79,85 @@
 
     <!------------------- START CONTACT  ----------------------->
 
-    <div class="contact">
-
-        <form>
-            <div class="row">
-                <div class="input-group">
-                    <input type="text" id="name" required>
-                    <label for="name"> <i class="fa-solid fa-user"></i> Your name</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="phone" required>
-                    <label for="phone"><i class="fa-solid fa-phone"></i> Phone number</label>
-                </div>
+    <div class="container">
+        <span class="big-circle"></span>
+        <img src="./assets/Images/shape.png" class="square" alt="" />
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              dolorum adipisci recusandae praesentium dicta!
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <img src="./assets/Images/location.png" class="icon" alt="" />
+                <p>92 Cherry Drive Uniondale, NY 11553</p>
+              </div>
+              <div class="information">
+                <img src="./assets/Images/email.png" class="icon" alt="" />
+                <p>lorem@ipsum.com</p>
+              </div>
+              <div class="information">
+                <img src="./assets/Images/phone.png" class="icon" alt="" />
+                <p>123-456-789</p>
+              </div>
             </div>
-
-            <div class="input-group">
-                <input type="text" id="email" required>
-                <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+  
+            <div class="social-media">
+              <p>Connect with us :</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
-            <div class="input-group">
-                <textarea id="message" rows="8" required></textarea>
-                <label for="message"><i class="fa-solid fa-message"></i> Your message</label>
-            </div>
-            <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
-        </form>
-
-    </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <h3 class="title">Contact us</h3>                
+              <input type="hidden" name="access_key" value="8088ae62-e968-4a02-bdeb-1c284d7b1b0f">
+              <div class="input-container">
+                <input type="text" name="name" class="input" required />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" required/>
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" required/>
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input" required></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
 
     <!------------------- END CONTACT  ------------------------->
-
 
 
     <script src="./assets/JS/script.js"></script>
@@ -128,6 +178,35 @@
                     window.location.href = url;
                 });
             });
+        });
+
+        const inputs = document.querySelectorAll(".input");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus");
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
+        });
+
+        const contactForm = document.querySelector('.contact-form form');
+
+        // Add event listener for form submission
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Clear the form fields
+            contactForm.reset();
         });
     </script>
 
