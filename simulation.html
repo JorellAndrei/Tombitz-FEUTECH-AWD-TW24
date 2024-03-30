@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT's Binfinity - Sample Game</title>
+
+    <!--styles-->
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <link rel="stylesheet" href="./assets/CSS/simulation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+
+    <!--scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("image", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var fetchData = ev.dataTransfer.getData("image");
+        ev.target.appendChild(document.getElementById(fetchData));
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all nav buttons
+        const navButtons = document.querySelectorAll('.nav-button');
+
+        // Add click event listener to each nav button
+        navButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Get the URL from the data-url attribute of the button
+                const url = this.dataset.url;
+
+                // Navigate to the URL
+                window.location.href = url;
+            });
+        });
+    });
+
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+
+    var rectangle = $("#person");
+    var speechBubble = $("#SpeechBubble");
+
+    rectangle.hover(
+        function() {
+            simulation.css({
+                "animation-name": "expand-bounce",
+                "animation-duration": "0.25s"
+            });
+        },
+        function() {
+            simulation.css({
+                "animation-name": "shrink",
+                "animation-duration": "0.1s"
+            });
+        }
+    );
+</script>
+</head>
+
+<body style="background-color: white;" class="preload">
+    <!------------------- NAVBAR  -------------------------->
+
+
+    <div id="nav-bar" style="z-index: 9999;">
+        <input id="nav-toggle" type="checkbox" />
+        <div id="nav-header"><a id="nav-title" href="https://drive.google.com/file/d/1Qskt0yT_P-fnrO6xYQvqhL7MG5HGZ-Dj/view?usp=sharing" target="_blank">ITs<i class="fab fa-bin"></i> Binfinity</a>
+            <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+            <hr/>
+        </div>
+
+        <div id="nav-content">
+
+            <div class="nav-button tooltip-container" data-url="./home.html">
+                <i class="fas fa-home"></i>
+                <span id="home">HOME</span>
+            </div>
+
+            <div class="nav-button" data-url="./about.html"><i class="fas fa-trash"></i><span>ABOUT</span></div>
+
+            <div class="nav-button" data-url="./features.html"><i class="fas fa-mobile"></i><span>FEATURES</span></div>
+
+            <hr/>
+
+            <div class="nav-button" data-url="./account.html"><i class="fas fa-folder"></i><span>ACCOUNT</span></div>
+
+
+            <div class="nav-button" data-url="./team.html"><i class="fas fa-fire"></i><span>TEAM</span></div>
+
+            <div class="nav-button" data-url="./contact.html"><i class="fas fa-magic"></i><span>CONTACT</span></div>
+            <hr/>
+            <div class="nav-button current" data-url="./simulation.html"><i class="fas fa-code"></i><span>GAME</span></div>
+            <div class="nav-button" data-url="./assets/Images/IT's Binfinity-MOBILE_APP_UI_compressed.pdf"><i class="fas fa-gem"></i><span>USER INTERFACE</span></div>
+
+            <div id="nav-content-highlight"></div>
+
+
+        </div>
+        <input id="nav-footer-toggle" type="checkbox" />
+        <div id="nav-footer">
+            <div id="nav-footer-heading">
+                <div id="nav-footer-avatar">
+                    <img src="./assets/Images/wired-lineal-63-home.gif" alt="">
+                </div>
+                <div id="nav-footer-titlebox"><a id="nav-footer-title" href="#1stsec">Game</a><span id="nav-footer-subtitle">Information</span></div>
+                <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+            </div>
+            <div id="nav-footer-content">
+                <Lorem>Are you ready to embark on an unforgettable adventure? "Mystery Island" offers you a sneak peek into a thrilling gaming experience that will leave you on the edge of your seat.</Lorem>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- END NAVBAR  -------------------------->
+
+    <div class="container">
+
+        <div class="floor">
+            <div class="soil">
+                <img id="dragData1" src="https://cdn.pixabay.com/photo/2013/07/12/12/48/garbage-146279_960_720.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData2" src="./assets/Images/elements/10.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData3" src="./assets/Images/elements/7.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData4" src="./assets/Images/elements/8.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData5" src="./assets/Images/elements/9.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData6" src="./assets/Images/elements/11.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <img id="dragData7" src="./assets/Images/elements/6.png" draggable="true" ondragstart="drag(event)" width="100">
+
+                <center>
+                    <img id="getData" ondrop="drop(event)" ondragover="allowDrop(event)" src="./assets/Images/elements/51.png">
+                </center>
+
+
+            </div>
+
+        </div>
+        <div class="pattern"></div>
+
+        <div class="leftTree">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="centerTree">
+            <div></div>
+        </div>
+        <div class="rightTree"></div>
+        <div class="Balloons">
+            <div class="BalloonLeft"></div>
+            <div class="Ballooncenter"></div>
+            <div class="BalloonRight"></div>
+            <div class="BalloonBase"></div>
+            <div class="BalloonBaseShadow"></div>
+        </div>
+        <div class="booth">
+            <div class="ticket"><span>&#9733</span> TICKET <span>&#9733</span></div>
+        </div>
+        <div class="boothShadow"></div>
+        <div class="ferris_wheel">
+            <div class="wheel_wrap">
+                <div class="wheel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="buckets">
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+            </div>
+            <div class="stand">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="sun"></div>
+        <div class="cloudLeft"></div>
+        <div class="cloudRight"></div>
+
+    </div>
+
+
+</body>
+
+</html>
