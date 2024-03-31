@@ -616,6 +616,16 @@ ul {
     list-style-type: none;
 }
 
+.hover-element {
+    padding-top: -20rem;
+    transition: transform 0.3s ease;
+}
+
+.hover-element:hover {
+    transform: translateX(-65px);
+    /* Move the element up by 5 pixels */
+}
+
 .animated-button {
     position: relative;
     display: flex;
