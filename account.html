@@ -255,6 +255,7 @@
                 alert('errorMessage');
             });
         });
+        
     </script>
 
     <script>
@@ -275,8 +276,24 @@
                 });
             });
         });
+
+        
     </script>
 
+    <script>
+        window.onload = function() {
+            // Retrieve username from local storage
+            const username = localStorage.getItem('username');
+
+            // Display username in profile card
+            const profileCardName = document.querySelector('.profile-card__name');
+            if (username) {
+                profileCardName.textContent = username;
+            } else {
+                profileCardName.textContent = "Guest";
+            }
+        };
+    </script>
 </body>
 
 </html>
