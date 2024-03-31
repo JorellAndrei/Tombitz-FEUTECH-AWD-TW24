@@ -1531,12 +1531,12 @@ text-shadow:1px 1px #73757E;
 .card-hover {
     overflow: hidden;
     transition: width 0.5s, background-color 0.3s;
-    background-color: #6bab78; /* Initial background color */
+    background-color: #245441;  /* Initial background color */
 }
 
 .card-hover:hover {
     width: 120%; /* Adjust width as needed */
-    background-color: #245441; /* Color change on hover */
+    background-color: #6bab78;/* Color change on hover */
 }
 
 .card-body {
