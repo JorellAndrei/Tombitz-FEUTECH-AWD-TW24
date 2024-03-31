@@ -99,7 +99,7 @@ body {
     border: 2px solid #fff;
     border-radius: 40px;
     font-size: 1.2em;
-    color: #245441;
+    color: #bdcec7;
     box-shadow: none;
     outline: none;
     font-weight: 900;
@@ -108,7 +108,7 @@ body {
 .login .inputBx input[type="button"] {
     width: 100%;
     background: #0078ff;
-    background: linear-gradient(45deg, #6bab78, #dee2dd);
+    background: linear-gradient(45deg, #458a54, #a4c89b);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
