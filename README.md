@@ -27,9 +27,9 @@ Explore a world where environmentally conscious gaming and fun combine to give p
 
 ✧  &nbsp; **Personalized User Profiles:** Customize your profile to reflect your preferences and interests.
 
-✧  &nbsp; **Robust Community Integration:** Connect with a vibrant community of users, sharing insights, feedback, and experiences.
+✧  &nbsp; **Robust Community Integration:** Connect with a vibrant community of users, sharing insights, and feedback..
 
-✧  &nbsp; **Responsive Design:** Enjoy a consistent and optimized viewing experience across desktops, tablets, and mobile devices.
+✧  &nbsp; **Responsive Design:** Enjoy an optimized viewing experience across desktops, tablets, and mobile devices.
  
  ## About IT's Binfinity
  
