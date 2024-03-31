@@ -827,8 +827,8 @@ label[for=nav-footer-toggle] {
 /*---------------------------------  About  ----------------------------------------------------------*/
 html {
     font-size: 12px;
-    color: #fff;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    font-family:'Segoe UI', Tahoma,  Verdana, sans-serif;
 }
 :root{
     --txtaccent: #fff;
