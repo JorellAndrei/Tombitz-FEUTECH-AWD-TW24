@@ -827,7 +827,7 @@ label[for=nav-footer-toggle] {
 /*---------------------------------  About  ----------------------------------------------------------*/
 html {
     font-size: 12px;
-    color: #000;
+    color: #fff;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 :root{
@@ -850,7 +850,7 @@ html {
 }
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://i.pinimg.com/564x/66/87/d6/6687d665dc0567a854f6cb7ec1b932c6.jpg) no-repeat top center/cover;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://media1.tenor.com/m/FBoMxPeH9xwAAAAC/breeze-gentle.gif) no-repeat top center/cover;
 }
 #sec-0 header.top .container {
     display: flex;
@@ -1045,6 +1045,7 @@ html {
 /* SECTION ONE */
 #sec-1 {
     background-color: var(--txtaccent);
+    margin-bottom: 45px;
 }
 #sec-1 article{
     padding-top: 20px;
@@ -1085,12 +1086,12 @@ html {
 }
 
 #sec-2{
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://i.pinimg.com/564x/fc/89/bb/fc89bb57216cc26b25ee1741488e9d47.jpg) no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://media1.tenor.com/m/FmSzW1ymW-4AAAAd/water-water-in-plants.gif) no-repeat center center/cover;
     text-align: center;
     padding: 3rem 0px 1.8rem;
 }
 #sec-2 .container>h1{
-    color: var(--haccent);
+    color: #6bab78;
     text-transform: uppercase;
     font-size: 2rem;
     margin-bottom: 10px;
@@ -1157,6 +1158,7 @@ text-shadow:1px 1px #73757E;
     text-align: center;
     color: #245441;
     font-weight: 900;
+  
 }
 #sec-3 .cont{
     display: flex;
@@ -1168,7 +1170,7 @@ text-shadow:1px 1px #73757E;
 }
 #sec-3 .card{
     width: 90%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 #sec-3 .card p{
     text-align: absolute;
@@ -1178,6 +1180,7 @@ text-shadow:1px 1px #73757E;
     -moz-hyphens: auto;
     hyphens: auto;
     font-size: 1rem;
+    margin-bottom: 25px;
 }
 #sec-3 .card>div{
     position: relative;
@@ -1186,7 +1189,6 @@ text-shadow:1px 1px #73757E;
     width: 65%;
     text-align: left;
     margin: 1px;
-    color: var(--txtaccent);
     background-color: #6bab78;
     padding: 8px 15px 20px;
     position: absolute;
@@ -1202,14 +1204,16 @@ text-shadow:1px 1px #73757E;
     bottom: 0; /* Align caption to the bottom */
     font-size: 1.2rem; /* Adjust font size */
     font-weight: 600; /* Adjust font weight */
+
 }
 #sec-3 a{
-    background-color:  #dee2dd;
+   color: #dee2dd;
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
+    
 }
 
 
@@ -1505,6 +1509,46 @@ text-shadow:1px 1px #73757E;
         width: 1340px;
     }
 }
+.card-hover {
+    overflow: hidden;
+    transition:  0.3s;
+    width: auto;
+}
+
+.card-hover:hover {
+    width: 150%; /* Adjust width as needed */
+}
+
+.card-body {
+    width: 100%;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.card-hover:hover .card-body {
+    opacity: 1;
+}
+.card-hover {
+    overflow: hidden;
+    transition: width 0.5s, background-color 0.3s;
+    background-color: #6bab78; /* Initial background color */
+}
+
+.card-hover:hover {
+    width: 120%; /* Adjust width as needed */
+    background-color: #245441; /* Color change on hover */
+}
+
+.card-body {
+    width: 100%;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.card-hover:hover .card-body {
+    opacity: 2;
+}
+
 
 /* END OF SHEET */
 
