@@ -39,13 +39,12 @@
     <!--ring div ends here-->
 
     <script type="module">
-
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"; import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"; import { getAuth, createUserWithEmailAndPassword } from
         "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"; const firebaseConfig = { apiKey: "AIzaSyAG3QR6DZ9wnuK4LNAVk4NE2Anhwrwps_0", authDomain: "authentication-app-8564c.firebaseapp.com", databaseURL: "https://authentication-app-8564c-default-rtdb.firebaseio.com",
-        projectId: "authentication-app-8564c", storageBucket: "authentication-app-8564c.appspot.com", messagingSenderId: "853024055608", appId: "1:853024055608:web:c7cee8cbf9aca322b861cd" }; // Initialize Firebase const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app); const auth = getAuth(); signup.addEventListener('click', (e) => { var email = document.getElementById('email').value; var password = document.getElementById('password').value; var username = document.getElementById('username').value;
-        createUserWithEmailAndPassword(auth, email, password) .then((userCredential) => { const user = userCredential.user; set(ref(database, 'users/' + user.uid), { username: username, email: email }) alert('User signed up successfully!') window.location.href
-        = "home.html"; }) .catch((error) => { const errorCode = error.code; const errorMessage = error.message; alert('errorMessage'); }); });
+        projectId: "authentication-app-8564c", storageBucket: "authentication-app-8564c.appspot.com", messagingSenderId: "853024055608", appId: "1:853024055608:web:c7cee8cbf9aca322b861cd" }; const app = initializeApp(firebaseConfig); const database =
+        getDatabase(app); const auth = getAuth(); signup.addEventListener('click', (e) => { var email = document.getElementById('email').value; var password = document.getElementById('password').value; var username = document.getElementById('username').value;
+        createUserWithEmailAndPassword(auth, email, password) .then((userCredential) => { const user = userCredential.user; set(ref(database, 'users/' + user.uid), { username: username, email: email }); alert('User signed up successfully!'); window.location.href
+        = "./home.html"; }) .catch((error) => { const errorCode = error.code; }); });
     </script>
 
     <script>

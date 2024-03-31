@@ -616,6 +616,196 @@ ul {
     list-style-type: none;
 }
 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #245441;
+    box-shadow: 0 0 0 2px #245441;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #245441;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #245441;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: white;
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+    fill: #6bab78;
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #6bab78;
+}
+
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
+.cssbuttons-io-button {
+    background: white;
+    color: #245441;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #6bab78;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #245441;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #245441;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+.btnMEET {
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #171717;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+}
+
+.btnMEET:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #1a4924, 0 15px 0 -4px #6bab78, 0 16px 10px -3px #302f2f;
+}
+
+.btnMEET:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #1a4924, 0 8px 0 -4px #6bab78, 0 12px 10px -3px #302f2f;
+}
+
+.btnKNOW {
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #171717;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+}
+
+.btnKNOW:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #6bab78, 0 15px 0 -4px #1a4924, 0 16px 10px -3px #2c4c74;
+}
+
+.btnKNOW:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959, 0 8px 0 -4px #39a2db, 0 12px 10px -3px #39a2db;
+}
+
 
 /*------------------------  NAVBAR -------------------------------*/
 

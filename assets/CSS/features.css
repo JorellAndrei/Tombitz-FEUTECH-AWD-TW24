@@ -41,6 +41,304 @@ body {
     overflow: hidden;
 }
 
+.btnPlant {
+    position: relative;
+    padding: 13px 35px;
+    background: #6bab78;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #18181869, inset 2px 2px 10px #6bab78;
+    transition: all .3s ease-in-out;
+    z-index: 999;
+}
+
+.icon-1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+}
+
+.icon-2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+}
+
+.icon-3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+}
+
+.icon-4 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+}
+
+.icon-5 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+}
+
+.btnPlant:hover {
+    padding: 13px 25px;
+    border-radius: 8px 8px 24px 24px;
+}
+
+.btnPlant:hover .icon-1 {
+    top: -250%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: auto;
+    animation: inIcon1 1s ease .45s forwards;
+}
+
+@keyframes inIcon1 {
+    0% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    25% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(5deg);
+    }
+    50% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(1deg);
+    }
+    65% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(3deg);
+    }
+    100% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+}
+
+.btnPlant:hover .icon-2 {
+    position: absolute;
+    top: -200%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 75px;
+    height: auto;
+    animation: inIcon2 1s ease .45s forwards;
+}
+
+@keyframes inIcon2 {
+    0% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    35% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(10deg);
+    }
+    50% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(4deg);
+    }
+    80% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(5deg);
+    }
+    100% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+}
+
+.btnPlant:hover .icon-3 {
+    position: absolute;
+    top: -130%;
+    left: 20%;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: auto;
+    animation: inIcon3 1s ease .45s forwards;
+}
+
+@keyframes inIcon3 {
+    0% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    35% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(-2deg);
+    }
+    100% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+}
+
+.btnPlant:hover .icon-4 {
+    position: absolute;
+    top: -300%;
+    left: 10%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon4 1s ease .45s forwards;
+}
+
+@keyframes inIcon4 {
+    0% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    40% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(-3deg);
+    }
+    100% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+}
+
+.btnPlant:hover .icon-5 {
+    position: absolute;
+    top: -350%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon5 1s ease .45s forwards;
+}
+
+@keyframes inIcon5 {
+    0% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    35% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(-3deg);
+    }
+    100% {
+        transform-origin: 0 100%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+}
+
+.fil-leaf-1 {
+    fill: #7B9B3A
+}
+
+.fil-leaf-2 {
+    fill: #556729;
+    fill-rule: nonzero
+}
+
+.fil-leaf-3 {
+    fill: #556729
+}
+
+.fil-leaf-4 {
+    fill: #3C4819
+}
+
+.fil-leaf-5 {
+    fill: #3C4819
+}
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #1d4b38;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #ffffff;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #6bab78;
+    color: #1d4b38;
+    border-radius: 8px;
+}
+
+.cta:hover:before svg {
+    stroke: #1d4b38;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
 
 /*  End of Main Css Rules  */
 
@@ -210,23 +508,19 @@ body {
     transition: all 0.4s ease;
     width: 200px;
     height: 50px;
-    border-radius: 30px 30px 30px 30px;
-    color: white;
-    font-size: large;
-    text-transform: uppercase;
-    margin-left: 20px;
-    background-color: inherit;
+    margin-left: 30px;
     cursor: pointer;
     outline: none;
-    border: 1px solid white;
     margin-top: 20px;
+    transition: 1s ease-in-out;
 }
 
-.text-iphone-wrapper button:nth-of-type(2) {
+
+/* .text-iphone-wrapper button:nth-of-type(2) {
     background-color: white;
     color: #6bab78;
     line-height: 27px;
-}
+} */
 
 .fofa {
     font-size: smaller;
