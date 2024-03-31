@@ -61,6 +61,24 @@
         window.onpopstate = function() {
             history.go(1);
         };
+
+        history.pushState(null, document.title, location.href);
+        window.addEventListener('popstate', function(event) {
+            history.pushState(null, document.title, location.href);
+        });
+
+        window.onload = function() {
+            // Retrieve username from local storage
+            const username = localStorage.getItem('username');
+
+            // Display username in profile card
+            const profileCardName = document.querySelector('.profile-card__name');
+            if (username) {
+                profileCardName.textContent = username;
+            } else {
+                profileCardName.textContent = "Guest";
+            }
+        };
     </script>
 </body>
 

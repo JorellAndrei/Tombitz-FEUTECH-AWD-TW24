@@ -70,7 +70,7 @@
 
             <div class="nav-button" data-url="./contact.html"><i class="fas fa-magic"></i><span>CONTACT</span></div>
             <hr/>
-            <div class="nav-button" data-url="./simulation.html"><i class="fas fa-code"></i><span>TRY GAME</span></div>
+            <div class="nav-button" data-url="./simulation.html"><i class="fas fa-code"></i><span>SAMPLE GAME</span></div>
             <div class="nav-button" data-url="./assets/Images/IT's Binfinity-MOBILE_APP_UI_compressed.pdf"><i class="fas fa-gem"></i><span>USER INTERFACE</span></div>
 
 
@@ -548,6 +548,26 @@
         <script src="./assets/JS/script.js"></script>
 
         <script>
+            function preventBack() {
+                window.history.forward();
+            }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () {
+                null
+            };
+
+        window.onload = function() {
+            // Retrieve username from local storage
+            const username = localStorage.getItem('username');
+
+            // Display username in profile card
+            const profileCardName = document.querySelector('.profile-card__name');
+            if (username) {
+                profileCardName.textContent = username;
+            } else {
+                profileCardName.textContent = "Guest";
+            }
+        };
             feather.replace()
 
             document.addEventListener('DOMContentLoaded', function() {
@@ -576,6 +596,20 @@
 
             var scene = document.getElementById('scene');
             var parallaxInstance = new Parallax(scene);
+
+            // Prevent going back to login page
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = function() {
+            window.history.pushState(null, "", window.location.href);
+        };
+
+        // Replace "login.html" and "signup.html" with the actual URLs of your login and signup pages
+        if (window.location.href.includes("./login.html") || window.location.href.includes("./signup.html")) {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function() {
+                window.history.pushState(null, "", window.location.href);
+            };
+        }
         </script>
         <script type="text/javascript">
             {
@@ -587,6 +621,31 @@
                 }
 
             }
+
+            // Function to prevent navigation to the previous page
+function preventBack() {
+    window.history.pushState(null, "", window.location.href);
+    window.addEventListener("popstate", function () {
+        window.history.pushState(null, "", window.location.href);
+    });
+}
+
+// Call the function to prevent navigation to the previous page
+preventBack();
+            
+            // Prevent going back to login page
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = function() {
+            window.history.pushState(null, "", window.location.href);
+        };
+
+        // Replace "login.html" and "signup.html" with the actual URLs of your login and signup pages
+        if (window.location.href.includes("./login.html") || window.location.href.includes("./signup.html")) {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function() {
+                window.history.pushState(null, "", window.location.href);
+            };
+        }
         </script>
 
 </body>
