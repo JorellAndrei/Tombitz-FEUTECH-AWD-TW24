@@ -71,6 +71,8 @@
 body {
     font-family: "Montserrat";
     overflow-x: hidden;
+    left: 0;
+    right: 0;
 }
 
 ul {
