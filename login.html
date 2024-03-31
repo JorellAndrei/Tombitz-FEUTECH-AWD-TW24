@@ -20,11 +20,15 @@
                 <input type="username" id="username" placeholder="Username">
             </div>
             <div class="inputBx">
+                <input type="email" id="email" placeholder="E-mail">
+            </div>
+            <div class="inputBx">
                 <input type="password" id="password" placeholder="Password">
             </div>
             <div class="inputBx">
-                <input type="button" onclick="login()" id="submit" value="Sign in">
+                <input type="button" id="login" value="Log in">
             </div>
+            
             <p id="text_show" style="color: #ffffff; font-size: 12px; "></p>
             <div class="links">
                 <a href="#">Forget Password</a>
@@ -34,34 +38,65 @@
     </div>
     <!--ring div ends here-->
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getDatabase, update, ref } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAG3QR6DZ9wnuK4LNAVk4NE2Anhwrwps_0",
+          authDomain: "authentication-app-8564c.firebaseapp.com",
+          databaseURL: "https://authentication-app-8564c-default-rtdb.firebaseio.com",
+          projectId: "authentication-app-8564c",
+          storageBucket: "authentication-app-8564c.appspot.com",
+          messagingSenderId: "853024055608",
+          appId: "1:853024055608:web:c7cee8cbf9aca322b861cd"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        login.addEventListener('click', (e) => {
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var username = document.getElementById('username').value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+
+                    const dt = new Date();
+                    update(ref(database, 'users/' + user.uid), {
+                        last_login: dt,
+                    })
+
+                    alert('User logged in successfully!')
+                    window.location.href = "home.html";
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+
+                    alert('errorMessage');
+                    // ..
+                });
+        });
+
+
+    </script>
+    
     <script>
-        function login() {
-            let userName = document.getElementById('username').value;
-            let passWord = document.getElementById('password').value;
-            let text_show = document.getElementById('text_show');
-
-            let user = "juliaansh";
-            let pass = "123456";
-
-            if (userName == user && passWord == pass) {
-                sessionStorage.setItem('username', userName);
-                window.location = "home.html";
-            } else if (userName == "" && passWord == "") {
-                text_show.innerHTML = "Enter username and password";
-            } else if (userName == user && passWord !== pass) {
-                document.getElementById("username").style.border = "2px solid white";
-                document.getElementById("password").style.border = "2px solid red";
-
-                text_show.innerHTML = "Incorrect password";
-            } else if (userName !== user) {
-                document.getElementById("username").style.border = "2px solid red";
-                document.getElementById("password").style.border = "2px solid white";
-                text_show.innerHTML = "Incorrect username or sign up";
-            } else {
-                text_show.innerHTML = "Incorrect username and password";
-            }
-
-        }
+        
 
         window.onload = function() {
             window.history.replaceState(null, null, window.location.href);

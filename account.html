@@ -215,6 +215,48 @@
       </svg>
 
     <script src="./assets/JS/script.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+        import { getAuth, onAuthStateChanged, signOut  } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAG3QR6DZ9wnuK4LNAVk4NE2Anhwrwps_0",
+          authDomain: "authentication-app-8564c.firebaseapp.com",
+          databaseURL: "https://authentication-app-8564c-default-rtdb.firebaseio.com",
+          projectId: "authentication-app-8564c",
+          storageBucket: "authentication-app-8564c.appspot.com",
+          messagingSenderId: "853024055608",
+          appId: "1:853024055608:web:c7cee8cbf9aca322b861cd"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        logoutBtn.addEventListener('click', function() {
+            signOut(auth).then(() => {
+                // Sign-out successful.
+
+                alert('User logged out successfully!');
+                window.location.href = "login.html";
+            }).catch((error) => {
+                // An error happened.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert('errorMessage');
+            });
+        });
+    </script>
+
     <script>
         feather.replace()
 
@@ -232,20 +274,6 @@
                     window.location.href = url;
                 });
             });
-        });
-
-        window.onload = function() {
-            let username = sessionStorage.getItem('username');
-            if (username) {
-                document.querySelector('.profile-card__name').innerText = username;
-            } else {
-                // Handle case where username is not found in session storage
-            }
-        };
-
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            sessionStorage.removeItem('username'); // Remove username from session storage on logout
-            window.location = "login.html";
         });
     </script>
 
