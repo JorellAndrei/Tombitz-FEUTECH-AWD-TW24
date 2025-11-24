@@ -15,6 +15,14 @@ Our mission is simple yet profound: to spread knowledge, raise awareness, and in
 
 So sharpen your minds, and let's embark on this exciting journey together. Welcome to IT'S Binfinity—where gaming transforms into a force for global change! 🌍✨
 
+### 📄 Documentation
+
+This project is part of the **Web System Design** course:  
+**CCS0043 — Applications Development and Emerging Technologies**
+
+- <a href="https://firebasestorage.googleapis.com/v0/b/miolms.firebasestorage.app/o/TICAP20_IEEE%2Fassets%2FITS%20BINFINITY%2FItsBinfinity-Preview.pdf?alt=media&token=e86cc90c-83e3-4e1a-8870-da4923bb8217" target="_blank">Screenshots</a>
+- <a href="https://firebasestorage.googleapis.com/v0/b/miolms.firebasestorage.app/o/TICAP20_IEEE%2Fassets%2FITS%20BINFINITY%2FTW22-BESTIES.pdf?alt=media&token=20d5cf1f-cb12-4152-bfe8-cecd484b825f" target="_blank">Summary Information</a>
+
 ## Introduction
 
 Explore a world where environmentally conscious gaming and fun combine to give people the ability to change the environment while having a great time. Join our platform to experience immersive simulations, educational information, and community participation, all with the goal of rethinking garbage sorting for a cleaner, greener future. Our platform will provide you with our user-friendly experience through the following:
